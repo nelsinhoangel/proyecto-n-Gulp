@@ -1,0 +1,464 @@
+//IMPORT
+@import "general.scss";
+@import "mixins.scss";
+@import "flex.scss";
+@import "foundation.scss";
+@import 'normalize.scss';
+@import "font-awesome.scss";
+@import "motion-ui.scss";
+
+
+//VAR
+$widthPT : 100%;
+$margen : 3em;
+$color : #FFF;
+$color2 : #59D716;
+
+
+/*GENERAL*/
+body {
+  font-family: 'Lato', sans-serif; 
+}
+.miclase{
+  background-color: $color2;
+  margin-bottom: 0em;
+}
+
+/*/HEADER/*/
+.header-mobile{
+
+  display: none;
+}
+.top-bar {
+  background-color: #007caf;
+  //background-color: $color2;
+  height: auto;
+  min-height: 5.8em;
+  height: auto;
+}
+
+.top-bar .title-area {
+  //position: absolute;
+  padding-right: 4em;
+  padding-top: 1.6em;
+  padding-left: 2.3em;
+   }
+
+.top-bar .name {
+  @include flexbox;
+  @include flex-direction(column);
+}
+
+.top-bar .name h1 a {
+  padding: 0em; 
+}
+
+.top-bar .name span {
+  position: relative;
+  @include line-height (10); 
+  color: #4ec9f5;
+  @include align-self(flex-end);
+}
+
+.top-bar-section ul li {
+   display: block;
+  background-color: #007caf;
+  padding-right: 1.5em;
+  padding-top: 1.6em; }
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background-color: #00b3f1;
+  width: auto; 
+  display: inline-block;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background-color: #06435c; }
+
+/*/STAGE/*/
+.stage__section {
+  width: $widthPT; }
+
+.stage__article {
+  width: $widthPT;
+  height: 76vh;
+  position: relative; }
+
+.stage__ul__track {
+  width: $widthPT;
+  height: $widthPT;
+  white-space: nowrap;
+  margin: 0;
+  position: relative; }
+
+.stage__li {
+  width: $widthPT;
+  height: $widthPT;
+  white-space: normal;
+  position: relative; }
+
+.stage__article ul li .row {
+  height: $widthPT;
+  @include flexbox;
+  @include flex-wrap(row wrap);
+  @include align-items(center);
+  }
+
+.stage__item {
+    @include justify-content(center); 
+}
+
+.stage__tex {
+  text-align: center; }
+
+/*/NAVIGATION STAGE/*/
+.stage__nav {
+  width: $widthPT;
+  height: 3.8em;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.8em;
+  @include flexbox;
+  @include flex-wrap(row wrap);
+  @include justify-content(space-between); 
+}
+
+.stage__nav a {
+  position: relative;
+  width: 3.8em;
+  height: 3.8em;
+  background: #06435c;
+  color: #FFF;
+  text-align: center;
+  @include align-self(center);
+}
+
+.stage__nav a i { 
+ @include line-height (25);
+}
+
+/*/CONTENT HIGHLIGHTS/*/
+.content__aside {
+  width: $widthPT;
+  margin-top: 3.8em;
+  @include flexbox;
+  @include flex-wrap(row wrap);
+  @include justify-content(space-around);
+  @include flex-wrap(wrap);
+  @include align-items(center); 
+}
+
+.content__destacado {
+  background-color: #63c6f5;
+  width: 31em;
+  height: 24.8em;
+  margin: 1rem;
+  @include flexbox;
+  @include flex-wrap(row wrap);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.icon {
+  position: relative;
+  width: 5.5em;
+  height: 5.5em; }
+
+.icon i {
+  position: absolute;
+  width: 4.5em;
+  height: 4.5em;
+  background: #FFF;
+  @include border-radius(50%);
+  color: #63c6f5;
+  text-align: center;
+  @include line-height (36);   
+}
+
+.content__destacado h3 {
+  margin-top: 1em; }
+
+.title {
+  color: #FFF; }
+
+.title2 {
+  color: #0078a0; }
+
+.title2::after {
+  content: ">";
+  color: #FFF;
+  font-size: 0.5em;
+  text-align: center;
+  font-family: 'Megrim', cursive; }
+
+.content__destacado p {
+  text-align: center;
+  padding-right: 3em;
+  padding-left: 3em;
+  letter-spacing: 0.0025em;
+  @include line-height (10); ;
+   }
+
+/*/CONTENT NEWS/*/
+.content__aside2 {
+  width: $widthPT;
+  height: 40em;
+  background-color: rgba(0, 124, 175, 0.1);
+  margin-top: 3.2em;
+  @include flexbox;
+  @include flex-wrap(row wrap);
+  @include justify-content(space-around);
+  @include flex-wrap(wrap);
+  @include align-items(center); 
+}
+
+.news {
+  @include flexbox;
+  @include flex-wrap(row wrap);
+  @include flex-wrap(wrap);
+  @include align-items(center); 
+}
+
+.btn {
+  margin: 0em;
+  padding: 0em; }
+
+/*/FOOTER/*/
+.footer {
+  position: relative;
+  width: $widthPT;
+  height: auto;
+  margin-top:2em;
+  @include flexbox;
+  @include flex-wrap(row wrap);
+  @include flex-wrap(wrap);
+  @include justify-content(space-around);
+  @include align-items(center); 
+}
+
+.form{
+
+}
+  input[type="text"]{
+
+    margin:5;
+  }
+  .form__input{
+
+
+  }
+
+  .form__textarea{
+    
+  }
+
+  .form__button{
+    width: $widthPT;
+  }
+
+///screens///
+/*Define mobile styles*/
+/*max-width 640px, mobile-only styles, use when QAing mobile issues*/
+@media only screen and (max-width: 40em) {
+
+.top-bar .title-area {
+    display: block;
+    margin-bottom: 2em;
+  }
+
+   .top-bar-section {
+    display: block;
+    width: auto;
+  }
+
+    .top-bar-section ul li {
+    display: block;
+    width: $widthPT;
+    background-color: #007caf;
+    }
+
+    .top-bar-section ul li {
+    display: block;
+    background-color: #007caf;
+    padding-top: 0.6em;
+    padding-right: 0;
+}
+
+    .top-bar-section li:not(.has-form) a:not(.button) {
+    background-color: #00b3f1;
+    width: auto; 
+    display: block;
+  }
+
+  .content__aside2 {
+    width: $widthPT;
+    height: 500px;
+    background-color: rgba(0, 124, 175, 0.1);
+    margin-top: 60px;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include justify-content(space-around);
+    @include align-items(center);
+     }
+
+  .content__destacado {
+    background-color: #63c6f5;
+    width: 31em;
+    height: 24.8em;
+    margin: 1rem;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+     }}
+/*min-width 641px, medium screens*/
+/*min-width 641px and max-width 1024px, use when QAing tablet-only issues*/
+@media only screen and (min-width: 40.063em) and (max-width: 66em) {
+  .content__aside2 {
+    width: $widthPT;
+    height: 500px;
+    background-color: rgba(0, 124, 175, 0.1);
+    margin-top: 60px;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include flex-direction(column);
+    @include justify-content(space-around);
+    @include align-items(center);
+  }
+
+  .content__destacado {
+    background-color: #63c6f5;
+    width: 90%;
+    height: 14.8em;
+    margin: 1rem;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+  }}
+
+/*min-width 1025px, large screens*/
+/*min-width 1025px and max-width 1200px, use when QAing large screen-only issues*/
+@media only screen and (min-width: 66.063em) and (max-width: 84em) {
+  .content__aside2 {
+    width: $widthPT;
+    height: 500px;
+    background-color: rgba(0, 124, 175, 0.1);
+    margin-top: 60px;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include justify-content(space-around);
+    @include align-items(center);
+     }
+
+  .content__destacado {
+    background-color: #63c6f5;
+    width: 19em;
+    height: 20.8em;
+    margin: 1rem;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+     }}
+/*min-width 1201px and max-width 1440px, use when QAing large screen-only issues*/
+@media only screen and (min-width: 84.063em) and (max-width: 90em) {
+  .content__aside2 {
+    width: $widthPT;
+    height: 500px;
+    background-color: rgba(0, 124, 175, 0.1);
+    margin-top: 60px;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include justify-content(space-around);
+    @include align-items(center);
+     }
+
+  .content__destacado {
+    background-color: #63c6f5;
+    width: 20em;
+    height: 20.8em;
+    margin: 1rem;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+     }}
+/*min-width 1441px, xlarge screens*/
+@media only screen and (min-width: 90.063em) {
+  .content__aside2 {
+    width: $widthPT;
+    height: 500px;
+    background-color: rgba(0, 124, 175, 0.1);
+    margin-top: 60px;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include justify-content(space-around);
+    @include align-items(center); 
+  }
+
+  .content__destacado {
+    background-color: #63c6f5;
+    width: 25em;
+    height: 20.8em;
+    margin: 1rem;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center); 
+
+     }}
+/*min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues*/
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+  .content__aside2 {
+    width: $widthPT;
+    height: 500px;
+    background-color: rgba(0, 124, 175, 0.1);
+    margin-top: 60px;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include justify-content(space-around);
+    @include align-items(center);  
+  }
+
+  .content__destacado {
+    background-color: #63c6f5;
+    width: 28em;
+    height: 20.8em;
+    margin: 1rem;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center); 
+     } }
+/*min-width 1921px, xxlarge screens*/
+@media only screen and (min-width: 120.063em) {
+  .content__aside2 {
+    width: $widthPT;
+    height: 500px;
+    background-color: rgba(0, 124, 175, 0.1);
+    margin-top: 60px;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include justify-content(space-around);
+    @include align-items(center); 
+  }
+
+  .content__destacado {
+    background-color: #63c6f5;
+    width: 38em;
+    height: 24.8em;
+    margin: 1rem;
+    @include flexbox;
+    @include flex-wrap(row wrap);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center); 
+  }}

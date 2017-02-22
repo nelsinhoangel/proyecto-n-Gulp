@@ -1,0 +1,14 @@
+@import "mixins.scss";
+/*GENERAL MASTERS*/
+html, body, div, img, a, p, h1, h2, h3, h4, h5, form, dl, dt, dd, code, * { margin:0px; padding:0px; border:none; }
+article, aside, figure, figcaption, footer, header, hgroup, nav, section {display: block;}
+html {@include clearfix;}
+*,*:after,*:before {@include box-sizing(border-box);}
+a {text-decoration: none;}
+ul { list-style-type:none;}
+//Nelsinho
+
+::selection{
+
+	background-color: #007caf;
+}
