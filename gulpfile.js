@@ -39,7 +39,8 @@ var config = {
 gulp.task('server', function() {
   gulp.src('./build')
     .pipe(webserver({
-      host: '0.0.0.0',
+      //host: '0.0.0.0',
+      host: 'http://localhost/',
       port: 8080,
       livereload: true
     }));
